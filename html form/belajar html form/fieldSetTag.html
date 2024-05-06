@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registrasi(field set tag)</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>identitas</legend>
+            <label for="nama">Nama: </label> <input type="text" name="nama" id="nama"> <br>
+            <label for="email">Email: </label> <input type="text" name="email" id="email"><br>
+            <label for="telepon">no Telp: </label> <input type="tel" name="telepon" id="telepon" pattern="(62)[0-9]{5,20}"><br>
+        </fieldset>
+        <fieldset>
+            <legend>alamat</legend>
+            <label for="jalan">Jalan: </label> <input type="text" name="jalan" id="jalan"><br>
+            <label for="kota">Kota: </label> <input type="text" name="kota" id="kota"><br>
+            <label for="rt">Rt: </label> <input type="tel" name="rt" id="rt" pattern="[0-9]{2}"><br>
+            <label for="rw">Rw: </label> <input type="tel" name="rt" id="rw" pattern="[0-9]{2}"><br>
+        </fieldset>
+        <button type="submit">simpan</button>
+    </form>
+</body>
+</html>
