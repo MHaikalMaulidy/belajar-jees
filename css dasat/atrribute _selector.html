@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atribute</title>
+    <style>
+        a[target] {
+            color: red;
+        }
+        a[target="_self"] {
+            color: blue;
+        }
+        p[title~="belajar"]{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <a href="" target="_blank">contoh 1</a>
+    <a href="" target="_self">contoh 2</a>
+    <a href="">contoh 3</a>
+    <a href="" >contoh 4</a>
+
+    <p title="belajar css">ini dipilih</p>
+    <p title="belajarcss">ini tidak dipilih</p>
+</body>
+</html>

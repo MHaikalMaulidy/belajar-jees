@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 p{
+            color: red;
+        }
+        /*ini child selector*/
+        h2 > p{
+            color: blue;
+        }
+        /*_ ini adjacent sibling selector milih setelah h3*/
+        h3 + p{
+            color: green;
+        }
+        /*ini general sibling selector milih semua kelas p yang dideklarasikan setelah h4 */
+        h4 ~ p{
+            font-size: 30px;
+            color: blueviolet;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>
+        <article> <p>dipilih</p> </article>
+        <p>dipilih</p>
+    </h1>
+    <p>ga dipilih</p>
+
+    <h2>
+        <article> <p>ga dipilih</p> </article>
+        <p>dipilih</p>
+    </h2>
+    
+    <h3>
+        <article>gadipilih</article>
+        <p>gadipilih</p>
+    </h3>
+    <p>dipilih</p>
+    <p>gadipilih</p>
+
+    <h4><p>america ya</p></h4>
+    <p>halooo</p>
+    <p>halooo</p>
+
+</body>
+</html>
