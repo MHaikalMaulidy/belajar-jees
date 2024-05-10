@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink </title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row; 
+        }
+        .content{
+            width: auto;
+            background-color: aqua;
+            border: solid;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px;
+        }
+        .konten1{
+            flex-shrink: 3;
+        }
+        .konten2{
+            flex-shrink: 2;
+        }
+        .konten3{
+            flex-shrink: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="content konten1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, ad consequuntur? Aut possimus exercitationem molestias laudantium nihil, omnis optio quod consequuntur porro quas natus magni at obcaecati quidem alias distinctio.</div>
+       <div class="content konten2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam incidunt quisquam eveniet, numquam quia repellat vel iusto voluptatem omnis autem ad minima laboriosam atque perspiciatis blanditiis, perferendis dolore illo! Optio?</div>
+       <div class="content konten3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores veniam sunt reprehenderit labore. Nisi consequatur saepe minima, numquam ullam reprehenderit! Velit, optio atque quae consequatur impedit numquam magni nihil beatae.</div>
+
+    </div>
+</body>
+</html>
