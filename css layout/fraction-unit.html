@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 200px repeat(5,1fr); /**ini singkatan dari 1fr 1fr 1fr 1fr 1fr**/
+            column-gap: 10px;
+        }
+        .sidebar{
+            background-color: bisque;
+        }
+        .content{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>sidebar</h1>
+        </div>
+        <div class="content">content</div>
+        <div class="content">content</div>
+        <div class="content">content</div>
+        <div class="content">content</div>
+        <div class="content">content</div>
+
+    </div>
+</body>
+</html>

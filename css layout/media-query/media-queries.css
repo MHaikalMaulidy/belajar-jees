@@ -1,0 +1,32 @@
+/**template ukuran device biasanya
+https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+**/
+@media all{
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+}
+
+@media screen and (min-width: 10px) and (max-width: 500px) {
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .content{
+        background-color: bisque;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .content{
+        background-color: aqua;
+    }
+}
+/**bukan cuma "and" ada or sama not juga. or syntaxnya (,) koma**/
