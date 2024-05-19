@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> display none bisa dipake buat menubar</title>
+    <style>
+        .menubar{
+            display: inline-block;
+        }
+        .menu{
+            background-color: bisque;
+            color: black;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .menulist{
+            display: none;
+            position: absolute;
+            background-color: bisque;
+        }
+        .menulist a{
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+        .menulist a:hover{
+            background-color: aqua;
+        }
+        .menubar:hover .menu{
+            background-color: aqua;
+        }
+        .menubar:hover .menulist{
+            display: block; /**jadi pas "sosial media di hover, bakal muncul class menulist**/
+        }
+    </style>
+</head>
+<body>
+    <div class="menubar">
+        <button class="menu">Sosial Media</button>
+        <div class="menulist">
+            <a href="#">Facebook</a>
+            <a href="#">Instagran</a>
+            <a href="#">X</a>
+            <a href="#">Github</a>
+
+        </div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor consequuntur, ex, molestias harum aut debitis laborum placeat rem perspiciatis quod asperiores illo, tempora culpa id sed omnis voluptatum repudiandae beatae?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor consequuntur, ex, molestias harum aut debitis laborum placeat rem perspiciatis quod asperiores illo, tempora culpa id sed omnis voluptatum repudiandae beatae?</p>
+
+</body>
+</html>
