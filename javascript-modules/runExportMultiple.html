@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="exportMultiple.mjs"></script>
+</head>
+<body>
+    <script type="module">
+        import{sum,company,Person} from'./exportMultiple.mjs'
+        console.info(company)
+        console.info(sum(1,2))
+        const person = new Person('timoty')
+        person.sayHello('mewing')
+    </script>
+</body>
+</html>
