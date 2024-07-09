@@ -1,3 +1,3 @@
-function sayHello(name){
-    document.writeln(`hallo ${name}`)
+export function sayHello(name){
+    console.info(`hallo ${name}`)
 }
