@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="name">
+    <input type="button" value="say" id="sayButton">
+    <script type="module">
+    
+        document.getElementById('sayButton').onclick= function(){
+            //masukin id name ke variabel name
+            const name=document.getElementById('name').value;
+            import('./dynamicModuleLoading.mjs').then(function(module){
+                module.alertHello(name)
+            })
+        }
+    </script>
+</body>
+</html>
