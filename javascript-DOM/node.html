@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> https://developer.mozilla.org/en-US/docs/Web/API/Node </title>
+</head>
+<body>
+    <ul id="menu">
+       <li id="first">first</li>
+       <li id="second">second</li>
+       <li id="third">third</li> 
+    </ul>
+    <script>
+        //variabel ini punya nilai node
+        const menu=document.getElementById('menu')
+        console.info(menu)
+        //node property
+        console.info(menu.children)//ngedapetin semua child dari menu  dalam bentuk menu
+
+        const second=document.getElementById('second')
+        console.info(second)
+        console.info(second.previousSibling.previousSibling)
+        console.info(second.nextSibling.nextSibling)//wajib dua kalo ada enter di tiap line
+
+        //method2nya liat sendiri di dokumentasi
+    </script>
+</body>
+</html>
