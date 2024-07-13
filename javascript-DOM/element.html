@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>https://developer.mozilla.org/en-US/docs/Web/API/Element </title>
+</head>
+<body>
+    <div id="content" class="content">
+    <h1 id="title" class="title"></h1>
+    <p id="deskripsi"></p>
+    <p id="deskripsi2">jawa</p>
+    </div>
+    <script>
+        const title=document.getElementById('title');
+        title.textContent='belajar javascript dom'
+        const desc=document.getElementById('deskripsi')
+        desc.textContent='belajar javascript dom'
+
+        console.info(title.id)
+        console.info(title.className)
+        console.info(title.tagName)
+
+        document.getElementById('deskripsi2').remove()
+
+        //create element https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+        const content=document.getElementById('content')
+
+        //buat h2
+        const judul= document.createElement('h2')
+        judul.textContent='belajar dom'
+        //append judul
+        content.appendChild(judul)
+    </script>
+</body>
+</html>
