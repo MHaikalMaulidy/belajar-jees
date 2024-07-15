@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="logo" src="https://pbs.twimg.com/profile_images/1711622306991316992/c0mYcuvq_400x400.jpg" alt="akademi kripto logo">
+    <script>
+        //kumpulan(list) attribute 
+       const logo= document.getElementById('logo')
+       const attribut=logo.attributes //attributes tipedatanya name node map
+       attribut.getNamedItem('src')
+       for(let attribute of attribut){
+        console.info(`${attribute.name} : ${attribute.value}`)
+       }
+
+    </script>
+</body>
+</html>
