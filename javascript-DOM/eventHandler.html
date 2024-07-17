@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="clickMe" type="button" value="Click me">
+    <input id="clickMe2" type="button" value="Click me2">
+    <script>
+        let jumlah=0
+        //cara 1 
+        //https://developer.mozilla.org/en-US/docs/Web/API/EventTarget
+        const button=document.getElementById('clickMe')
+        button.addEventListener('click',function(){
+            jumlah++
+            if(jumlah===1){
+            button.setAttribute('value','you already click me')
+        }else{
+            button.setAttribute('value','stop it')
+        }
+        })
+
+        //cara 2
+        //https://udn.realityripple.com/docs/Web/API/GlobalEventHandlers
+        const button2=document.getElementById('clickMe2')
+        button2.onclick=function(){
+            button2.setAttribute('value','sudah diklik')
+        }
+        //mending pake cara1
+    </script>
+</body>
+</html>
