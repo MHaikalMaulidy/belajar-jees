@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .buttons{
+            height: 20px;
+            width: 60px;
+            border-radius:60px ;
+            font-weight: bold;
+            border-color: blue;
+        }
+        #merah{
+            background-color: red;
+        }
+        #biru{
+            background-color: blue;
+        }
+        #ijo{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="button" value="blue" class="buttons" id="biru"/>
+    <input type="button" value="red" class="buttons" id="merah"/>
+    <input type="button" value="green" class="buttons" id="ijo"/>
+    <div id="canvas" style="width: 500px;height: 500px;background-color: black;"></div>
+    <script>
+        const canvas=document.getElementById('canvas')
+        const buttons=document.querySelectorAll('input')
+        for (let button of buttons){
+          button.addEventListener('click',function(){ 
+            canvas.style.backgroundColor=button.getAttribute('value')
+        })}
+    </script>
+</body>
+</html>
