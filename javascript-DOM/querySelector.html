@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors </title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="menuItem">satu</li>
+        <li id="dua">dua</li>
+        <li class="menuItem">tiga</li>
+        <li class="jawa">empat</li>
+        <li>lima</li>
+    </ul>
+    <p>ini text</p>
+    <script>
+        const elements=document.querySelectorAll('*')
+        console.info(elements);
+
+        const list=document.querySelectorAll('li')
+        console.info(list);
+
+        const menuItem=document.querySelectorAll('.menuItem')
+        console.info(menuItem)
+
+        const idSelect=document.querySelectorAll('#dua')
+        console.info(idSelect)
+
+        const selectClass=document.querySelectorAll('[class]')
+        console.info(selectClass)
+
+        const check=document.querySelectorAll('li[class^=jawa]');
+        console.info(check)
+    </script>
+</body>
+</html>
