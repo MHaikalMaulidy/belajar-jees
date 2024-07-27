@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .tampilan{
+            padding: 10px;
+            border: 3px solid black;
+            border-radius: 10px;
+            width: 40%;
+        }
+    </style>
 </head>
 <body>
-    <form name="toDoForm">
-        <table>
+    <form name="toDoForm" class="tampilan">
+        <table >
             <tbody>
                 <tr>
                     <td><label for="todo">Todo:</label></td>
@@ -21,7 +29,7 @@
         </table>
     </form>
     <h1>TO DO LIST</h1>
-    <table>
+    <table class="tampilan">
         <thead>
             <tr>
                 <th>Filter:</th>
@@ -44,12 +52,7 @@
                 toDoListBody.removeChild(toDoListBody.firstChild)
             }
         }
-
-        function displayToDoList(){
-            clearToDoList()
-            for (let index = 0; index < toDoList.length; index++) {
-                const element = toDoList[index];
-                
+        function addTodoList(todo){
                 const tr=document.createElement('tr')
                 const tdButton=document.createElement('td')
                 tr.appendChild(tdButton)
@@ -60,10 +63,19 @@
                 tdButton.appendChild(buttonDone)
 
                 const tdToDo=document.createElement('td')
-                tdToDo.textContent=element
+                tdToDo.textContent=todo
                 tr.appendChild(tdToDo)
 
                 document.getElementById('toDoListBody').appendChild(tr)
+        }
+        function displayToDoList(){
+            clearToDoList()
+            for (let index = 0; index < toDoList.length; index++) {
+                const element = toDoList[index];
+                const searchText=document.getElementById('search').value.toLowerCase();
+                if(element.toLowerCase().includes(searchText)){
+                    addTodoList(element)
+                }
             }
         }
         document.forms['toDoForm'].onsubmit=function(event){
@@ -73,6 +85,14 @@
             document.forms['toDoForm'].reset();
             console.info(toDoList)
             displayToDoList();
+        }
+
+        const searchInput=document.getElementById('search')
+        searchInput.onkeyup=function(){
+            displayToDoList()
+        }
+        searchInput.onkeydown=function(){
+            displayToDoList()
         }
     </script>
 </body>
