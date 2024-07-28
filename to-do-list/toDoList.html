@@ -52,7 +52,11 @@
                 toDoListBody.removeChild(toDoListBody.firstChild)
             }
         }
-        function addTodoList(todo){
+        function removeList(i){
+            toDoList.splice(i,1);
+            displayToDoList()
+        }
+        function addTodoList(todo,i){
                 const tr=document.createElement('tr')
                 const tdButton=document.createElement('td')
                 tr.appendChild(tdButton)
@@ -60,6 +64,9 @@
                 const buttonDone=document.createElement('input')
                 buttonDone.type='button'
                 buttonDone.value='Done'
+                buttonDone.onclick = function(){
+                    removeList(i)
+                }
                 tdButton.appendChild(buttonDone)
 
                 const tdToDo=document.createElement('td')
@@ -74,7 +81,7 @@
                 const element = toDoList[index];
                 const searchText=document.getElementById('search').value.toLowerCase();
                 if(element.toLowerCase().includes(searchText)){
-                    addTodoList(element)
+                    addTodoList(element,index)
                 }
             }
         }
