@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams </title>
+</head>
+<body>
+    <form>
+        <label for="search">search: 
+            <input type="text" id="search" name="search">
+        </label>
+        <br>
+        <input type="button" id="searchButton" value="search">
+    </form>
+    <script>
+        function doSearch(){
+            const ajax=new XMLHttpRequest();
+            const param=new URLSearchParams()
+            param.append('search',document.getElementById('search').value)
+            param.append('filter',document.getElementById('search').value)
+
+            ajax.open("GET",`https://eopkw1ekxm0pbk4.m.pipedream.net?${param.toString()}`)
+            ajax.onload=function(){
+                console.info(ajax.responseText)
+            }
+            ajax.send()
+        }
+        document.getElementById('searchButton').onclick=doSearch
+    </script>
+</body>
+</html>
