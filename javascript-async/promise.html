@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise </title>
+
+</head>
+<body>
+    <script>
+        const promise=new Promise (function(resolve,reject){
+            const ajax=new XMLHttpRequest();
+            ajax.open('GET','API/product.json')
+            ajax.onload=function(){
+                if(ajax.status===200){
+                    resolve(ajax.responseText);
+                }
+                else{
+                    reject(`gagal : ${ajax.responseText}`);
+                }
+            };
+            ajax.send();
+
+        })
+        console.info(promise)
+    </script>
+</body>
+</html>
