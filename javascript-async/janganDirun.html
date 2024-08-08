@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="buttonTask">click me!</button>
+    <script>
+        function slowLog(total){
+            for(let i=0;i<total;i++){
+                console.info(i)
+            }
+        }
+        document.getElementById('buttonTask').onclick=function(){
+            console.info('start')
+            slowLog(1000000)
+            console.info('end')
+        }
+    </script>
+</body>
+</html>
